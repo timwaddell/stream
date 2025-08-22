@@ -8,7 +8,11 @@ export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <StreamingSection delay={500}>
+        <div className="text-sm text-gray-500 mb-4">
+          Page loaded at: {new Date().toISOString()}
+        </div>
+        
+        <StreamingSection delay={2000}>
           <Image
             className="dark:invert"
             src="/next.svg"
@@ -19,12 +23,12 @@ export default function Home() {
           />
         </StreamingSection>
 
-        <StreamingSection delay={1000}>
+        <StreamingSection delay={4000}>
           <h1 className="text-3xl font-bold mb-4">Streaming Demo</h1>
           <p className="text-lg mb-4">This content loads with artificial delays to demonstrate streaming.</p>
         </StreamingSection>
 
-        <StreamingSection delay={1500}>
+        <StreamingSection delay={6000}>
           <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
             <li className="mb-2 tracking-[-.01em]">
               Get started by editing{" "}
@@ -39,7 +43,7 @@ export default function Home() {
           </ol>
         </StreamingSection>
 
-        <StreamingSection delay={2000}>
+        <StreamingSection delay={8000}>
           <div className="flex gap-4 items-center flex-col sm:flex-row">
             <a
               className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
