@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 
 async function DelayedContent({ delay, children }: { delay: number; children: React.ReactNode }) {
+  // Use a proper promise-based delay for server streaming
   await new Promise(resolve => setTimeout(resolve, delay));
   return <>{children}</>;
 }
